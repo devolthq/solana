@@ -1,0 +1,18 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+devolt = "7HhCBpYxGZU4jsYy295T68VWqqRgyLvK17wcrBS6bTVm"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/Users/marcelofeitoza/.config/solana/id.json"
+
+[scripts]
+test = "yarn jest --detectOpenHandles --forceExit"
