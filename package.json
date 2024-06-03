@@ -1,10 +1,13 @@
 {
     "scripts": {
         "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
-        "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
+        "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+        "run:listener": "ts-node websocket/listener.ts",
+        "run:simulation": "ts-node websocket/simulation.ts"
     },
     "dependencies": {
-        "@coral-xyz/anchor": "^0.29.0"
+        "@coral-xyz/anchor": "^0.29.0",
+        "uuid": "^9.0.1"
     },
     "devDependencies": {
         "@types/bn.js": "^5.1.0",

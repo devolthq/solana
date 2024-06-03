@@ -14,7 +14,7 @@ pub fn battery_report(
     if station.id != id {
         msg!("Creating new station with ID: {}", id);
 
-        if latitude.is_none() || longitude.is_none() || capacity.is_none() {
+        if latitude.is_none() || longitude.is_none() || capacity.is_none() || available.is_nan() {
             msg!("Invalid input: latitude, longitude, and capacity must be provided");
             return err!(errors::DevoltError::InvalidInput);
         }

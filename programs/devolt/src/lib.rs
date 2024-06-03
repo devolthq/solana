@@ -6,7 +6,7 @@ pub mod errors;
 
 pub use states::*;
 
-declare_id!("7HhCBpYxGZU4jsYy295T68VWqqRgyLvK17wcrBS6bTVm");
+declare_id!("Hzvebg214S12bog5bEMqLzwydVihYwDuyw4H6PJZoF23");
 
 #[program]
 pub mod devolt {
