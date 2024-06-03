@@ -8,8 +8,8 @@ pub struct Station {
     pub id: String,
     pub latitude: f64,
     pub longitude: f64,
-    pub capacity: u64,
-    pub available: u64,
+    pub capacity: f64,
+    pub available: f64,
 }
 
 #[derive(Accounts)]
@@ -22,7 +22,7 @@ pub struct Initialize<'info> {
 }
 
 #[derive(Accounts)]
-#[instruction(id: String, latitude: Option<f64>, longitude: Option<f64>, capacity: Option<u64>, available: u64)]
+#[instruction(id: String, latitude: Option<f64>, longitude: Option<f64>, capacity: Option<f64>, available: f64)]
 pub struct BatteryReport<'info> {
     #[account(
         init_if_needed,

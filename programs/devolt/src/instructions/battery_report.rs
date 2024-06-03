@@ -7,11 +7,11 @@ pub fn battery_report(
     id: String,
     latitude: Option<f64>,
     longitude: Option<f64>,
-    capacity: Option<u64>,
-    available: u64,
+    capacity: Option<f64>,
+    available: f64,
 ) -> Result<()> {
     let station: &mut Account<crate::Station> = &mut ctx.accounts.station;
-if station.id != id {
+    if station.id != id {
         msg!("Creating new station with ID: {}", id);
 
         if latitude.is_none() || longitude.is_none() || capacity.is_none() {
@@ -24,7 +24,12 @@ if station.id != id {
         station.longitude = longitude.unwrap();
         station.capacity = capacity.unwrap();
 
-        msg!("Station created with latitude: {}, longitude: {}, and capacity: {}", station.latitude, station.longitude, station.capacity);
+        msg!(
+            "Station created with latitude: {}, longitude: {}, and capacity: {}",
+            station.latitude,
+            station.longitude,
+            station.capacity
+        );
     }
 
     msg!(
